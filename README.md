@@ -26,15 +26,15 @@ npm run build
 
 Added the following test files;
 
-- login.test.js
+- /auth/login.test.js
   - Tests successful login
   - Tests unsuccessful login
-- logout.test.js
+- /storage/localstorage.test.js
+  - Test localStorage saving
   - Test logout function.
-- create.test.js
+- /posts/create.test.js
   - Tests successful post creation
   - Tests bad request unsuccessful post creation
-  - Tests Unauthorized unsuccessful post creation
 
 ### End To End testing, Cypress
 
