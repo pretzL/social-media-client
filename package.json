@@ -14,9 +14,7 @@
     "lint": "eslint src/**/*.js",
     "lint-fix": "eslint src/**/*.js --cache --fix",
     "prepare": "husky install",
-    "dev": "vite",
-    "vite-build": "vite build",
-    "vite-preview": "vite preview"
+    "dev": "live-server"
   },
   "jest": {
     "resetMocks": false,
