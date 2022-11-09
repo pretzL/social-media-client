@@ -3,14 +3,14 @@ name: Deploy static content to Pages
 
 on:
   # Runs on pushes targeting the default branch
-  - push:
+  push:
     branches: ["master", "workflow"]
   
   # Runs on PR
-  - pull_request:
+  pull_request:
 
   # Allows you to run this workflow manually from the Actions tab
-  - workflow_dispatch:
+  workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
