@@ -21,14 +21,18 @@ describe("Create Post", () => {
     cy.get('a[href="/?view=post"]').click();
     cy.wait(2000);
     cy.url().should("include", "post");
-    cy.get("#postTitle").should("exist").type("Creating a post in Cypress");
-    cy.get("#postTags").should("exist").type("Testing, Cypress, KillMePls");
-    cy.get("#postMedia")
+    cy.get("input[name=title]")
+      .should("exist")
+      .type("Creating a post in Cypress");
+    cy.get("input[name=tags]")
+      .should("exist")
+      .type("Testing, Cypress, KillMePls");
+    cy.get("input[name=media]")
       .should("exist")
       .type(
         "https://cdn.discordapp.com/attachments/729294434491170856/1027146979110817802/brooke-lark-M4E7X3z80PQ-unsplash_700px-test.jpg"
       );
-    cy.get("#postBody")
+    cy.get("textarea[name=body]")
       .should("exist")
       .type(
         "I made this using Cypress so if anything went wrong, don't kill me"
@@ -51,6 +55,7 @@ describe("Create Post", () => {
     cy.get("#postTitle").should("exist").type("Creating a post in Cypress");
     cy.get('button[data-action="submit"]').click();
     cy.wait(2000);
+    cy.get(".alert").contains("Error message text");
     cy.url().should("include", "/");
   });
 
