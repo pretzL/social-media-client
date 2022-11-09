@@ -3,7 +3,7 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
-    URL: "http://127.0.0.1:5500/",
+    URL: "https://fermain.github.io/social-media-client/",
     setupNodeEvents(on, config) {
       config.env = {
         ...process.env,
